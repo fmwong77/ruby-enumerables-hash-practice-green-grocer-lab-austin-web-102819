@@ -32,27 +32,6 @@ def apply_coupons(cart, coupons)
     end
     end
   return cart
-  
-  
-  =begin
-  item = ""
-  discounted_cart = cart
-  new_coupon_hash = {:price => 0, :clearance => true, :count => 0}
-  coupons.each do |coupon|  
-    if cart.key?(coupon[:item])    
-      item = "#{coupon[:item]} W/COUPON" 
-      if cart[coupon[:item]][:count] >= coupon[:num]
-        new_coupon_hash[:price] = '%.2f' % (coupon[:cost] / coupon[:num])      
-        new_coupon_hash[:count] = coupon[:num]
-        cart[coupon[:item]][:count] -= coupon[:num]
-        cart[item] = new_coupon_hash
-      end
-      
-      #puts element[:item]  
-    end    
-  end  
-  cart
-  =end
 end
 
 def apply_clearance(cart)
