@@ -12,6 +12,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
+  =begin
   item = ""
   discounted_cart = cart
   new_coupon_hash = {:price => 0, :clearance => true, :count => 0}
@@ -29,6 +30,7 @@ def apply_coupons(cart, coupons)
     end    
   end  
   cart
+  =end
 end
 
 def apply_clearance(cart)
